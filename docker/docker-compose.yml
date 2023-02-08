@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: visitorDB
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=visitor
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgres/data
+
+volumes:
+  db:
+    driver: local
