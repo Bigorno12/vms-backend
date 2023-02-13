@@ -1,13 +1,40 @@
 version: '3.9'
 
 services:
-  db:
-    container_name: visitorDB
+  keycloak:
+    container_name: vms-keycloak
+    image: jboss/keycloak:latest
+    restart: on-failure
+    command:
+      - "-b"
+      - "0.0.0.0"
+      - "-Dkeycloak.migration.action=import"
+      - "-Dkeycloak.migration.provider=dir"
+      - "-Dkeycloak.migration.dir=/config/"
+      - "-Dkeycloak.migration.strategy=IGNORE_EXISTING"
+    volumes:
+      - ./config:/config/
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=password
+      - DB_VENDOR=postgres
+      - DB_USER=admin
+      - DB_PASSWORD=password
+      - DB_ADDR=keycloak-db
+      - DB_PORT=5432
+      - DB_DATABASE=visitor
+    ports:
+      - "8081:8080"
+    depends_on:
+      - keycloak-db
+
+  keycloak-db:
+    container_name: vms-db
     image: postgres:latest
     environment:
-      - POSTGRES_DB=visitor
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
+      POSTGRES_DB: visitor
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
     ports:
       - '5432:5432'
     volumes:
