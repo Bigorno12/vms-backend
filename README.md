@@ -24,7 +24,7 @@ cd .\docker\
 ```
 - Download all the containers to run keycloak and postgres database
 ```docker
-cd docker-compose --env-file .\env_file.env up
+docker-compose --env-file .\env_file.env up
 ```
 
 ---
