@@ -10,8 +10,14 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
     show-sql: true
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/visitor?serverTimezone=Indian/Mauritius
+    user: admin
+    password: password
+    baseline-on-migrate: true
 
 springdoc:
   swagger-ui:

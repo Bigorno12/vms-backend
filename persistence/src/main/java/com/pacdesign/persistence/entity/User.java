@@ -1,7 +1,10 @@
 package com.pacdesign.persistence.entity;
 
+import com.pacdesign.persistence.enumeration.Roles;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -37,4 +40,8 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Enumerated(value = EnumType.STRING)
+    @Column(name = "roles", nullable = false)
+    private Roles roles;
 }
