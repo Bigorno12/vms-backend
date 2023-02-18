@@ -20,11 +20,11 @@ mvn clean install
 ```
 - Using the terminal and navigate the docker folder
 ```cmd
-cd .\rabbitmq\docker
+cd .\docker\
 ```
 - Download all the containers to run keycloak and postgres database
 ```docker
-docker-compose up
+docker-compose .\env_file.env up
 ```
 
 ---

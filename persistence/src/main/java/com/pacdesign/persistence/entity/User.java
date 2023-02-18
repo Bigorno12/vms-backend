@@ -1,21 +1,18 @@
 package com.pacdesign.persistence.entity;
 
-import com.pacdesign.persistence.enumeration.Gender;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
-@Builder
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "Users")
@@ -26,10 +23,18 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "first_name", nullable = false)
+    @Column(name = "first_name", nullable = false, length = 50)
     private String firstName;
 
-    @Enumerated(value = EnumType.STRING)
-    @Column(name = "gender", nullable = false)
-    private Gender gender;
+    @Column(name = "last_name", nullable = false, length = 100)
+    private String lastName;
+
+    @Column(name = "email", nullable = false, length = 100)
+    private String email;
+
+    @Column(name = "user_name", nullable = false, length = 15)
+    private String userName;
+
+    @Column(name = "password", nullable = false)
+    private String password;
 }

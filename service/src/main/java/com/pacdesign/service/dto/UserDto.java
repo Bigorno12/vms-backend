@@ -1,8 +1,19 @@
 package com.pacdesign.service.dto;
 
-import com.pacdesign.persistence.enumeration.Gender;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Builder
-public record UserDto(String firstName, Gender gender) {
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserDto {
+
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String userName;
+    private String password;
 }
