@@ -1,18 +1,24 @@
 package com.pacdesign.service.impl;
 
-import com.pacdesign.persistence.repository.UserRepository;
-import com.pacdesign.service.UserService;
-import com.pacdesign.service.mapper.UserMapper;
+import com.pacdesign.persistence.repository.PersonRepository;
+import com.pacdesign.service.PersonService;
+import com.pacdesign.service.dto.PersonDto;
+import com.pacdesign.service.mapper.PersonMapper;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PersonServiceImpl implements UserService {
+public class PersonServiceImpl implements PersonService {
 
-    private final UserMapper userMapper;
-    private final UserRepository userRepository;
+    private final PersonMapper personMapper;
+    private final PersonRepository personRepository;
 
-    public PersonServiceImpl(UserMapper userMapper, UserRepository userRepository) {
-        this.userMapper = userMapper;
-        this.userRepository = userRepository;
+    public PersonServiceImpl(PersonMapper personMapper, PersonRepository personRepository) {
+        this.personMapper = personMapper;
+        this.personRepository = personRepository;
+    }
+
+    @Override
+    public void savePerson(PersonDto personDto) {
+        personRepository.save(personMapper.mapToEntity(personDto));
     }
 }

@@ -13,14 +13,18 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.envers.AuditOverride;
+import org.hibernate.envers.Audited;
 
 @Getter
 @Setter
+@Entity
+@Audited
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Users")
-@Entity
-public class User extends Audit {
+@Table(name = "person")
+@AuditOverride(forClass = Audit.class)
+public class Person extends Audit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +39,8 @@ public class User extends Audit {
     @Column(name = "email", nullable = false, length = 100)
     private String email;
 
-    @Column(name = "user_name", nullable = false, length = 15)
-    private String userName;
+    @Column(name = "username", nullable = false, length = 15)
+    private String username;
 
     @Column(name = "password", nullable = false)
     private String password;

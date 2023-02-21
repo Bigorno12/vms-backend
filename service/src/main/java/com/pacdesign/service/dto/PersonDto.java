@@ -1,5 +1,6 @@
 package com.pacdesign.service.dto;
 
+import com.pacdesign.persistence.enumeration.Roles;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,11 +10,12 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
+public class PersonDto {
 
     private String firstName;
     private String lastName;
     private String email;
-    private String userName;
+    private String username;
     private String password;
+    private Roles roles;
 }

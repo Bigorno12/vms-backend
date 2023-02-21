@@ -23,10 +23,3 @@ springdoc:
   swagger-ui:
     path: /swagger-ui-custom.html
     operations-sorter: method
-
-api:
-  name:/evms
-
-server:
-  servlet:
-    context-path: /evms
