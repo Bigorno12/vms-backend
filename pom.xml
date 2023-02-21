@@ -26,6 +26,8 @@
         <java.version>17</java.version>
         <postgresql.version>42.5.3</postgresql.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
+        <keycloak-adapter-bom.version>20.0.3</keycloak-adapter-bom.version>
+        <springdoc-openapi-ui.version>1.6.4</springdoc-openapi-ui.version>
         <version.lombok-mapstruct-binding>0.2.0</version.lombok-mapstruct-binding>
     </properties>
 
@@ -45,9 +47,14 @@
             <dependency>
                 <groupId>org.keycloak.bom</groupId>
                 <artifactId>keycloak-adapter-bom</artifactId>
-                <version>20.0.3</version>
+                <version>${keycloak-adapter-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc-openapi-ui.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
