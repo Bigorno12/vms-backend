@@ -26,6 +26,10 @@ cd .\docker\
 ```docker
 docker-compose --env-file .\env_file.env up
 ```
+- Remove all the container
+```docker
+docker-compose down
+```
 
 ---
 
