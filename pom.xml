@@ -27,7 +27,7 @@
         <postgresql.version>42.5.3</postgresql.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
         <keycloak-adapter-bom.version>20.0.3</keycloak-adapter-bom.version>
-        <springdoc-openapi-ui.version>1.6.4</springdoc-openapi-ui.version>
+        <springdoc-openapi-starter-webmvc-ui.version>2.0.2</springdoc-openapi-starter-webmvc-ui.version>
         <version.lombok-mapstruct-binding>0.2.0</version.lombok-mapstruct-binding>
     </properties>
 
@@ -53,8 +53,8 @@
             </dependency>
             <dependency>
                 <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-ui</artifactId>
-                <version>${springdoc-openapi-ui.version}</version>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc-openapi-starter-webmvc-ui.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

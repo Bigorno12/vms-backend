@@ -12,8 +12,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class PersonDto {
 
-    private String firstName;
-    private String lastName;
+    private String firstname;
+    private String lastname;
     private String email;
     private String username;
     private String password;

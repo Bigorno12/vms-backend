@@ -29,6 +29,10 @@ docker-compose --env-file .\env_file.env up
 
 ---
 
+### Swagger
+- Get access to the swagger ui
+http://localhost:8080/swagger-ui/index.html
+
 ## Links
 1. keycloak
     - [Keycloak and Spring Boot Security](https://medium.com/@max.mayr/keycloak-and-spring-boot-security-b069306b0fb0)
