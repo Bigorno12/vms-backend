@@ -2,9 +2,9 @@ CREATE TABLE person
 (
     id                 BIGSERIAL    NOT NULL,
     created_by         VARCHAR(255),
-    created_date       TIMESTAMP(6),
+    created_date       TIMESTAMP(50),
     last_modified_by   VARCHAR(255),
-    last_modified_date VARCHAR(6),
+    last_modified_date TIMESTAMP(50),
     email              VARCHAR(100) NOT NULL,
     firstname         VARCHAR(50)  NOT NULL,
     lastname         VARCHAR(50)  NOT NULL,
