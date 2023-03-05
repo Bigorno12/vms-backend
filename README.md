@@ -26,8 +26,16 @@ cd .\docker\
 ```docker
 docker-compose --env-file .\env_file.env up
 ```
+- Remove all the container
+```docker
+docker-compose down
+```
 
 ---
+
+### Swagger
+- Get access to the swagger ui
+http://localhost:8080/swagger-ui/index.html
 
 ## Links
 1. keycloak

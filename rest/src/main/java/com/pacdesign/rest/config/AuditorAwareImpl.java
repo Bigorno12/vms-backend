@@ -1,4 +1,4 @@
-package com.pacdesign.persistence.config;
+package com.pacdesign.rest.config;
 
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.lang.NonNull;
