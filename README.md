@@ -7,9 +7,19 @@
 ---
 
 ## Introduction
-The application is using the **modular monolith** architecture it means all the code is powering a single but is seperated using different modules
+The Visitor management system is using the **modular monolith** architecture it means all the code is powering a single but is seperated using different modules.
+For Security this Application will use JWT Token to authenticate the user.
 
----
+#### What is JWT
+ - JSON Web Token (JWT) is an open internet standard for sharing secure information between two parties. 
+The token contains a JSON “payload” which is digitally signed ( with a private secret or public/private key ) using a cryptographic algorithm. 
+The digital signature makes the token safe from tampering as a tampered token becomes invalid.
+
+- A JWT looks something like this:
+  - **eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.FGK5PCL49k3jfNCq6wZtn6T-uG9Dv4hOYIm55xTux8w**
+
+#### JWT Authentication Flow
+![img.png](img.png)
 
 ---
 
