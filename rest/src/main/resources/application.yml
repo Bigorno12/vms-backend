@@ -18,3 +18,6 @@ spring:
     user: admin
     password: password
     baseline-on-migrate: true
+
+jwt:
+  secret: REPLACE_THIS_WITH_YOUR_SECRET

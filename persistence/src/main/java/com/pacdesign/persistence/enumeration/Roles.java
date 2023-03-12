@@ -1,5 +1,5 @@
 package com.pacdesign.persistence.enumeration;
 
 public enum Roles {
-    ADMIN
+    ROLE_ADMIN
 }
